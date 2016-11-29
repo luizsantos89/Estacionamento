@@ -1,12 +1,10 @@
 package br.cesjf.projetosw.servlets;
 
-import br.cesjf.projetosw.model.dao.Ocorrencia;
-import br.cesjf.projetosw.model.vo.Cliente;
+
 import br.cesjf.projetosw.model.vo.Vaga;
 import br.cesjf.projetosw.model.vo.VagaCarro;
 import br.cesjf.projetosw.model.vo.VagaMoto;
 import java.io.IOException;
-import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,12 +18,13 @@ public class VagaServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
     }
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
         
-        request.getRequestDispatcher("/WEB-INF/registro-estacionamento.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/cadastro-vaga.jsp").forward(request, response);
     }
 
     @Override
@@ -33,27 +32,22 @@ public class VagaServlet extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        String id_cliente = request.getParameter("cliente");
-        int tipoVaga = Integer.parseInt(request.getParameter("vaga"));
         Vaga vaga;
-        Ocorrencia ocorrencia = new Ocorrencia();
-        Cliente cliente = new Cliente();
-                
         
-        if(tipoVaga==1) {
+        if(request.getParameter("tipo").equals("1")) {
             vaga = new VagaCarro();
+            vaga.setVagaCarro(true);
+            vaga.setVagaMoto(false);
         } else {
             vaga = new VagaMoto();
+            vaga.setVagaCarro(false);
+            vaga.setVagaMoto(true);
         }
         
-        ocorrencia.setCliente(cliente);
-        ocorrencia.setVaga(vaga);
-        ocorrencia.setHoraEntrada(new Date());
-        ocorrencia.setTipoVeiculo(tipoVaga);
-        
-        request.setAttribute("ocorrencia",ocorrencia);
-        
-        request.getRequestDispatcher("consulta-ocorrencia.jsp").forward(request, response);
+        vaga.setDescricao(request.getParameter("descricao"));        
+            
+        request.setAttribute("vaga",vaga);        
+        request.getRequestDispatcher("/WEB-INF/detalhes-vaga.jsp").forward(request, response);
     }
 
 }

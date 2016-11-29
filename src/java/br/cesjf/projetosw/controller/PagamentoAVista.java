@@ -3,20 +3,17 @@ package br.cesjf.projetosw.controller;
 
 import br.cesjf.projetosw.model.dao.Ocorrencia;
 import br.cesjf.projetosw.model.vo.Cliente;
-import java.util.Date;
 
-public class PagamentoCartao implements Pagamento {
+public class PagamentoAVista implements Pagamento {
     double valorPagamento;
-    int diferencaSaidaEntrada;
-    int quantSegundos;
     double valorHora = 50;
 
     @Override
-    public double processarPagamento(int tipoVeiculo, int tipoPgto, int tipoCliente, double qtdeHoras) {
+    public double processarPagamento(int tipoVeiculo, int tipoPgto, int tipoCliente, double qtdeHoras){
         double valorHora;
         double valorFixo;
-        double desconto;  
-        double valorTotal;      
+        double desconto; 
+        double valorTotal;
         
         if (tipoVeiculo == 1) {
             valorHora = 4.50;
@@ -40,8 +37,8 @@ public class PagamentoCartao implements Pagamento {
         
         return valorTotal;
     }
+    
+    public PagamentoAVista(){
         
-    public PagamentoCartao() {
-
     }
 }

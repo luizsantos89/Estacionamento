@@ -25,10 +25,12 @@ a:visited {
     background-color: white;
     border-radius: 10px;
     text-align: justify;
+    border-bottom-radius: 10px;
 }
 
 #header {
     width: 100%;
+    text-align:center;
 }
 
 #conteudo {

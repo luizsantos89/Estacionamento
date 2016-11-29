@@ -26,8 +26,15 @@
                     </small>
                 </div>
                 <div id="texto">
-                    <h1>Cliente ${cliente.nome}</h1>
-                    <h3>Mensalista: ${cliente.mensalista}</h3>
+                    <h1>Pagamento registrado: </h1>
+                    
+                    <h3>Cliente: ${cliente}</h3>
+                    <p>
+                        Tipo de veículo: ${tipoDeVeiculo} <br />
+                        Tipo de cliente: ${tipoDeCliente} <br />
+                        Forma de pagamento: ${formaDePgto} <br />
+                        Valor pago: R$ ${valorPago}
+                    </p>
                 </div>
             </div>
         </div>

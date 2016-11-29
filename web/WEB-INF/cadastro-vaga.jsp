@@ -1,7 +1,7 @@
 
 <html>
     <head>
-        <title>Cadastro de clientes</title>
+        <title>Cadastro de vagas</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="estilo.css" />
     </head>
@@ -26,8 +26,27 @@
                     </small>
                 </div>
                 <div id="texto">
-                    <h1>Cliente ${cliente.nome}</h1>
-                    <h3>Mensalista: ${cliente.mensalista}</h3>
+                    <h1>Cadastro de vaga</h1>
+                    <form action="VagaServlet" method="post">
+                        <table>
+                            <tr>
+                                <td>Descrição: </td>
+                                <td><input type="text" name="nome" text="55" /></td>
+                            </tr>
+                            <tr>
+                                <td>Tipo: </td>
+                                <td>
+                                    <select name="tipo">
+                                        <option value="1">Carro</option>
+                                        <option value="2">Moto</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><button type="submit">Cadastrar</button></td>
+                            </tr>
+                        </table>
+                    </form> 
                 </div>
             </div>
         </div>

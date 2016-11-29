@@ -14,10 +14,11 @@
             <div id="conteudo">
                 <div id="barraLateral">
                     <ul>
-                        <li><a href="index.html">P&aacute;gina Principal</a></li>
-                        <li><a href="ClienteServlet">Cadastro cliente</a></li>
-                        <li><a href="index.html">Registrar ocorrência</a></li>
-                        <li><a href="index.html">Consultar Pagamento</a></li>
+                        <li><a href="index.html">Principal</a></li>
+                        <li><a href="ClienteServlet">Clientes</a></li>
+                        <li><a href="VagaServlet">Vagas</a></li>
+                        <li><a href="index.html">Ocorrência</a></li>
+                        <li><a href="index.html">Pagamento</a></li>
                     </ul>
                     <small>
                         Grupo: Jéssica Maria Barbosa Antônio, Jhonata Adams Lopes Saques, 
@@ -37,7 +38,7 @@
                                 <td>
                                     <select name="tipo">
                                         <option value="1">Horista</option>
-                                        <option value="1">Mensalista</option>
+                                        <option value="2">Mensalista</option>
                                     </select>
                                 </td>
                             </tr>

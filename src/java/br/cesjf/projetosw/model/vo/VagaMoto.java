@@ -1,18 +1,10 @@
 
 package br.cesjf.projetosw.model.vo;
 
-import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public class VagaMoto implements Vaga, Serializable{
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+public class VagaMoto implements Vaga {
     private String descricao;
+    private boolean vagaCarro;
+    private boolean vagaMoto;
     
     @Override
     public void criarVaga() {
@@ -23,19 +15,30 @@ public class VagaMoto implements Vaga, Serializable{
         
     }
     
-    public Long getId() {
-        return id;
-    }
-    
-    public void setId(Long id) {
-        this.id = id;
-    }
-    
     public String getDescricao() {
         return descricao;
     }
     
+    @Override
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+    
+    public boolean isVagaMoto() {
+        return vagaMoto;
+    }
+    
+    @Override
+    public void setVagaMoto(boolean vagaMoto) {
+        this.vagaMoto = vagaMoto;
+    }
+
+    public boolean isVagaCarro() {
+        return vagaCarro;
+    }
+    
+    @Override
+    public void setVagaCarro(boolean vagaCarro) {
+        this.vagaCarro = vagaCarro;
     }
 }

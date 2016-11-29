@@ -26,8 +26,9 @@
                     </small>
                 </div>
                 <div id="texto">
-                    <h1>Cliente ${cliente.nome}</h1>
-                    <h3>Mensalista: ${cliente.mensalista}</h3>
+                    <h1>Vaga: ${vaga.descricao}</h1>
+                    <h3>Carro: ${vaga.vagaCarro}</h3>
+                    <h3>Moto: ${vaga.vagaMoto}</h3>
                 </div>
             </div>
         </div>

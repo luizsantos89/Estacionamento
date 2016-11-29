@@ -1,12 +1,9 @@
 
 package br.cesjf.projetosw.model.bo;
 
-public class CalculaValor {
-    double valor;
-    int segundos;
-    boolean mensalista;
-    
-    public double ValorTotal() {
-        return valor;
-    }
+import br.cesjf.projetosw.model.vo.Cliente;
+import br.cesjf.projetosw.model.vo.Vaga;
+
+interface CalculaValor {
+    double calculaValorAPagar(Cliente cliente);
 }
