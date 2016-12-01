@@ -1,0 +1,73 @@
+html, body {
+    background-color: peru;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    font-family: "Century Gothic", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: teal;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: teal;
+}
+
+a:visited {
+    color: teal;
+}
+
+#pagina {
+    width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: justify;
+    border-bottom-radius: 10px;
+}
+
+#header {
+    width: 100%;
+    text-align:center;
+}
+
+#conteudo {
+    width: 100%;
+    background-color: bisque;
+}
+
+#barraLateral {
+    width: 280px;
+    float: left;
+    height: 100%;
+    background-color: buttonface;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#barraLateral ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 2.3em;
+}
+
+#texto {
+    display: block;
+    height: 100%;
+    padding: 10px;
+}
+
+#rodape {
+    height: 50px;
+    font-size: small;
+    text-align: center;
+    vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}

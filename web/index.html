@@ -1,0 +1,59 @@
+
+<html>
+    <head>
+        <title>Estacionamento</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="estilo.css" />
+    </head>
+    <body>
+    <center>
+        <div id="pagina">
+            <div id="header">
+                <a href="index.html"><img src="imagens/logo.png" alt="Principal" /></a>
+            </div>
+            <div id="conteudo">
+                <div id="barraLateral">
+                    <ul>
+                        <li><a href="index.html">Principal</a></li>
+                        <li><a href="ClienteServlet">Clientes</a></li>
+                        <li><a href="VagaServlet">Vagas</a></li>
+                        <li><a href="PagamentoServlet">Pagamento</a></li>
+                    </ul>
+                    <small>
+                        <b>Grupo:</b><br />
+                                Jéssica Maria Barbosa Antônio<br />
+                                Jhonata Adams Lopes Saques <br/>
+                                José Fl&aacute;vio de Assis Júnior<br />
+                                Luiz Cl&aacute;udio Afonso dos Santos
+                    </small>
+                </div>
+                <div id="texto">
+                    <h1>Padrões de Projeto utilizados:</h1>
+                    
+                    <b>Factory Method:</b> Classe principal: Vaga. Classes que são criadas de acordo com 
+                    a seleção do usuário: VagaCarro e VagaMoto; <br /><br />
+                    
+                    <b>Strategy: </b> No Model do MVC, classe VO, existem as classes para cálculo do valor a ser
+                    pago de acordo com o tipo de veículo (carro ou moto) e com o plano do cliente (mensalista ou horista);
+                    <br /><br />
+                    
+                    <b>Command: </b> No Controller do MVC, existem as classes que especificam as formas de pagamento.
+                    <br /><br />
+                    
+                    <b>Padrão MVC: </b> Organizando as classes e páginas referentes ao View (Páginas onde o usuário faz a
+                    interação com o sistema (as solicitações), Model onde estãos as classes que instanciam os objetos a serem
+                    manipulados e o Controller onde estão as regras de negócio do sistema. <br /><br />
+                    
+                    <b>Memento: </b> Implementado no Model do MVC, mantém um log de cadastros de clientes, para que
+                    seja possível uma correção em caso de erro de digitação ou retorno ao estado anterior em caso de erro
+                    sistêmico. <br /><br />
+                    
+                    <b>Singleton: </b> Criação do objeto usuario (o usuário que cadastra clientes, vagas e registra pagamentos). 
+                    O usuário é o mesmo que fica instanciado até que seja deslogado do sistema. Obs: Uma única instância, realizada
+                    apenas uma vez, que fará parte de todos os processos até que seja encerrada.
+                </div>
+            </div>
+        </div>
+    </center>
+    </body>
+</html>
